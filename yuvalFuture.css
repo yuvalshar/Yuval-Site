@@ -1,0 +1,192 @@
+/* body {
+    background-color: black;
+} */
+
+#canvasWrapper{
+    display: block;
+    margin: auto;
+    box-shadow: -3px 2px 9px 6px black;
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 95px;
+    left: 120px;
+}
+
+#canvas{
+    width: 100%;
+    height: 100%;
+}
+
+#logo{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#lionPicture{
+    position: absolute;
+    top: 400px;
+    left: 1000px;
+    width: 10px;
+    height: 10px;
+}
+
+#tripPicture{
+    position: absolute;
+    top: 400px;
+    left: 1000px;
+    width: 10px;
+    height: 10px;
+}
+
+#gardenPicture{
+    position: absolute;
+    top: 400px;
+    left: 1000px;
+    width: 10px;
+    height: 10px;
+}
+
+/* #studies:hover {
+    color: black;
+    transition: 0.86s;
+    cursor: pointer;
+    border: 100px;
+    border-color: yellow
+} */
+
+#studiesButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    top: 400px;
+    left: 600px;
+    overflow: hidden;
+    transition: background-color 0.3s;
+  }
+  
+
+  @keyframes explode {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+      background-color: #3498db;
+    }
+    25% {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      background-color: #e74c3c;
+    }
+    50% {
+      transform: scale(1.2);
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+      background-color: #f1c40f;
+    }
+    75% {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      background-color: #2ecc71;
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+      background-color: #3498db;
+    }
+  }
+
+
+  #studiesButton:active {
+    animation: explode 0.8s ease-in-out;
+  }
+
+
+/* אנימציה - דפים */
+
+/* עיצוב בסיסי */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  /* הגדרת האנימציה להטוס כדף */
+  @keyframes foldToPlane {
+    0% {
+      transform: scale(1) rotateX(0deg) rotateZ(0deg);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(0.5) rotateX(180deg) rotateZ(45deg);
+      opacity: 0.7;
+    }
+    75% {
+      transform: scale(0.5) rotateX(180deg) rotateZ(45deg);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(0) rotateX(360deg) rotateZ(90deg);
+      opacity: 0;
+    }
+  }
+  
+  /* הגדרת האנימציה להנחתת המטוס נייר */
+  @keyframes landPlane {
+    0% {
+      transform: translateY(-100%) scale(0) rotateZ(90deg);
+      opacity: 0;
+    }
+    50% {
+      transform: translateY(50%) scale(1.2) rotateZ(0deg);
+      opacity: 0.7;
+    }
+    100% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* הכפתור */
+  #studiesButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* הדף הנוכחי בעיצובה של אנימציה */
+  .fade-out {
+    animation: foldToPlane 1s forwards;
+  }
+  
+  /* הדף החדש בעיצובה של אנימציה */
+  .fade-in {
+    animation: landPlane 1s forwards;
+    animation-delay: 1s; /* המתנה של 2 שניות */
+  }
+  
+  /* מיכל האנימציה */
+  .page-transition {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white; /* צבע רקע ניתן לשנות */
+    overflow: hidden;
+  }
+  
