@@ -16,7 +16,7 @@ const KEYS = {
 };
 
 window.onresize = updateCanvasSize();
-let time = 14;
+let time = 11;
 let gameOn = true;
 let score = 0;
 
@@ -150,7 +150,6 @@ function gameLoop() {
                 prompt ("Worng answer, try again");
                 resetKeys();
                 sQuest;
-        // }
 
         }
     }
@@ -167,7 +166,7 @@ function timer() {
     } else {
         gameOver();
         writeText("Your score is " + score, "Blue", 50, undefined, "bold", 420, 80);
-        writeText("Press the button above to move to the next dimension", "Green", 46, undefined, "bold", 10, 590);
+        writeText("Press the button above to move to the next dimension", "Green", 46, undefined, "bold", 24, 590);
     }
 }
 
@@ -215,12 +214,9 @@ studies.addEventListener("mousedown", function() {
     }, 800);
 });
 
-studies.addEventListener('click', function() {
-    // הוספת הכיתה "fade-out" לדף הנוכחי
+studies.addEventListener("click", function() {
     document.body.classList.add('fade-out');
-  
-    // המתנה לסיום האנימציה לפני מעבר לדף החדש
     setTimeout(function() {
-      window.location.href = "secondPage.html"; // לדף החדש
-    }, 1000); // זמן תיאום עם אורך האנימציה
+      window.location.href = "secondPage.html";
+    }, 1000);
   });
