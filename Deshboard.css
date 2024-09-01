@@ -16,11 +16,11 @@
 #buttonCanvas{
     display: block;
     margin: auto;
-    position: absolute;
     width: 34%;
     height: 10%;
-    top: 20px;
-    left: 440px;
+    position: absolute;
+    top: 5%;
+    left: 44%ֿ;
     box-shadow: -3px 2px 9px 6px rgb(0, 0, 0);
 }
 
@@ -28,8 +28,8 @@
     position: absolute;
     width: 34%;
     height: 10%;
-    top: 20px;
-    left: 440px;
+    top: 5%;
+    left: 44%;
     box-shadow: -3px 2px 9px 6px rgb(0, 0, 0);
 }
 
