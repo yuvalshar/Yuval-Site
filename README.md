@@ -1,5 +1,5 @@
 # Personal Portfolio Project
-
+### August 2024
 Welcome to my personal portfolio project! This project is a creative representation of who I am, developed using JavaScript, HTML, and CSS. It provides an interactive experience to learn about my background, interests, and childhood.
 
 ## Project Structure
